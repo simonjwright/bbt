@@ -423,6 +423,9 @@ package body BBT.Tests.Actions is
       IO.Put_Line ("Output_Equal_To ", Verbosity => Debug);
       Put_Step_Result (Step     => Step,
                        Success  => Is_Equal (Output, T2,
+                         Case_Insensitive => False,
+                         Ignore_Blanks => False,
+                         Ignore_Blank_Lines => False,
                          Sort_Texts => Step.Ignore_Order),
                        Fail_Msg => "Output:  " & Code_Fenced_Image (Output) &
                          "not equal to expected:  " & Code_Fenced_Image (T2),
